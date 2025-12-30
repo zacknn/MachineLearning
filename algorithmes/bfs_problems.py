@@ -34,7 +34,7 @@ def solve_river_crossing():
                 
                 if is_valid(new_state) and new_state not in visited:
                     visited.add(new_state)
-                    action = f"Takes {items[i]} → {'right' if 1-f==0 else 'left'}"
+                    action = f"Takes {items[i]} → {'right' if 1-f==1 else 'left'}"
                     queue.append((new_state, path + [(f,w,g,c), action]))
     
     return None
@@ -191,6 +191,6 @@ print("\nMaze Path (8 steps):")
 print(" → ".join(path))
 
 
-# i splve this problems by my self on a paper before coding them here that why i know how many steps are there in each solution 
-# i solve them using BFS algorithm as requested . that why some problems have mny steps like hanoi and 8puzzle
+# I solved these problems by myself on paper before coding them here, that's why I know how many steps are in each solution 
+# I solved them using BFS algorithm as requested. That's why some problems have many steps like hanoi and 8puzzle
 # if you want me to optimize any of the solutions or use another algorithm please let me know
