@@ -1,3 +1,5 @@
+import pygame
+import os
 # colorss
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -17,3 +19,15 @@ COLS = 15
 FPS = 60
 WIDTH = COLS * TILE_SIZE
 HEIGHT = ROWS * TILE_SIZE
+
+
+title_number = []
+for i in range(1, 9):
+    title_number.append(pygame.transform.scale(pygame.image.load(os.path.join('assets', f'Tile{i}.png')), (TILE_SIZE, TILE_SIZE)))
+
+tile_empty = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileEmpty.png')), (TILE_SIZE, TILE_SIZE))
+tile_exploded = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileExploded.png')), (TILE_SIZE, TILE_SIZE))
+tile_flag = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileFlag.png')), (TILE_SIZE, TILE_SIZE))
+tile_mine = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileMine.png')), (TILE_SIZE, TILE_SIZE))
+tile_not_mine = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileNotMine.png')), (TILE_SIZE, TILE_SIZE))
+tile_unknown = pygame.transform.scale(pygame.image.load(os.path.join('assets', 'TileUnknown.png')), (TILE_SIZE, TILE_SIZE))

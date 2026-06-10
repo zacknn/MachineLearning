@@ -8,8 +8,9 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Minesweeper")
         self.clock = pygame.time.Clock()
-    
-    
+        self.board = Board()
+
+
     def new(self):
         pass
     
@@ -23,6 +24,7 @@ class Game:
     
     def draw(self):
         self.screen.fill(BG_COLOR)
+        self.board.draw(self.screen)
         pygame.display.flip()
         
         
