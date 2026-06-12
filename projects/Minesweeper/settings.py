@@ -19,7 +19,7 @@ COLS = 15
 FPS = 60
 WIDTH = COLS * TILE_SIZE
 HEIGHT = ROWS * TILE_SIZE
-
+AMOUNT_MINES = 20
 
 title_number = []
 for i in range(1, 9):
