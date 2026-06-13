@@ -21,6 +21,19 @@ WIDTH = COLS * TILE_SIZE
 HEIGHT = ROWS * TILE_SIZE
 AMOUNT_MINES = 20
 
+
+#Buttons
+BUTTON_WIDTH = 100
+BUTTON_HEIGHT = 50
+BUTTON_X = WIDTH + 20  # Place buttons to the right of the grid
+PLAY_BUTTON_Y = 100
+AI_BUTTON_Y = 200
+BUTTON_COLOR = (70, 70, 70)
+BUTTON_HOVER_COLOR = (100, 100, 100)
+BUTTON_TEXT_COLOR = WHITE
+
+WINDOW_WIDTH = WIDTH + BUTTON_WIDTH + 40  # Add padding
+
 title_number = []
 for i in range(1, 9):
     title_number.append(pygame.transform.scale(pygame.image.load(os.path.join('assets', f'Tile{i}.png')), (TILE_SIZE, TILE_SIZE)))

@@ -28,7 +28,7 @@ class Tile () :
 class Board () :
     def __init__ (self) :
         self.board_surface = pygame.Surface((WIDTH, HEIGHT))
-        self.board_list = [[Tile(ROWS , COLS , tile_empty , ".") for ROWS in range(ROWS)] for COLS in range(COLS)]
+        self.board_list = [[Tile(x , y , tile_empty , ".") for x in range(ROWS)] for y in range(COLS)]
         self.place_mines()
         self.place_clues()
         self.dug = []
