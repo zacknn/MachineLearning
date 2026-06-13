@@ -82,7 +82,7 @@ class Game:
         self.ai_button.draw(self.screen, self.font)
         
         # Draw current mode text
-        mode_text = f"Mode: {'AI' if self.game_mode == 'ai' else 'Human'}"
+        mode_text = f"Mode: {'AI' if self.game_mode == 'ai' else 'You'}"
         text_surface = self.font.render(mode_text, True, WHITE)
         self.screen.blit(text_surface, (BUTTON_X, AI_BUTTON_Y + BUTTON_HEIGHT + 20))
         
@@ -158,9 +158,9 @@ class Game:
             
             # Show result
             if hasattr(self, 'win') and self.win:
-                text = "YOU WIN!" if self.game_mode == "human" else "AI WINS!"
+                text = "YOU WIN!" if self.game_mode == "You" else "AI WINS!"
             else:
-                text = "GAME OVER!" if self.game_mode == "human" else "AI LOST!"
+                text = "GAME OVER!" if self.game_mode == "You" else "AI LOST!"
             
             text_surface = self.font.render(text, True, WHITE)
             text_rect = text_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2))
@@ -177,5 +177,5 @@ class Game:
 # Main game loop
 game = Game()
 while True:
-    game.new("human")  # Start in human mode
+    game.new("You")  # Start in human mode
     game.run()
